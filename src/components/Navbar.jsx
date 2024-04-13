@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex px-5 justify-between top-0 bg-custom-blue h-20 w-full fixed">
-      <img src="logo.svg" alt="FitHeal text" />
+    <div className="flex px-5 justify-between top-0 bg-black h-20 w-full fixed">
+      <div className="flex flex-col">
+      <img src="logonew.svg" alt="FitHeal text" className="w-12"/><p className="font-bold text-white text-2xl ">FitHeal</p>
+      </div>
       <div className="flex">
         <Link to="/">
           <img className="w-20" src="home.svg" alt="Home" />

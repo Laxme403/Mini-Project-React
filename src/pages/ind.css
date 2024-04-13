@@ -1,0 +1,29 @@
+.card {
+    transition: box-shadow .3s ease, transform .2s ease;
+   }
+   
+   
+   /*Card footer*/
+   .card-social {
+    transform: translateY(100%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    box-shadow: 0 8px 50px #23232333;
+   }
+   
+   .card:hover .card-info {
+    transform: translateY(-5%);
+   }
+   
+   .card:hover .card-social {
+    transform: translateY(0%);
+    opacity: 1;
+   }
+   

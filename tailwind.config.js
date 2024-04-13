@@ -8,12 +8,15 @@ export default {
     extend: {
       width: {
         '200': '200px',
+        '80':  '80px',
       },
       height: {
         '80': '80px',
+        '800':'800px'
       },
       colors: {
-        'custom-blue': '#646a8e',
+        'custom-gray': '#ccccccca',
+        'custom-green': '#222538' 
       },
       fontFamily: {
         'lato': ['Lato', 'sans-serif'],

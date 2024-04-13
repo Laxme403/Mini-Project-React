@@ -1,34 +1,25 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 const Male = () => {
-  const svgRef = useRef(null);
+  const svgRef = useRef();
 
   const changeAbdominals = (muscle) => {
     const svgObjects = svgRef.current.getElementsByClassName("mySvg");
 
     for (let i = 0; i < svgObjects.length; i++) {
       var svgObject = svgObjects[i].contentDocument;
+      console.log("SVGOBJECT" , svgObject.getElementById(''));
       var gElement = svgObject.getElementById(muscle);
-
+      console.log("GELEMNT" , gElement);
       if (gElement) {
-        gElement.addEventListener("click", function () {
-          //window.location.href = `https://localhost:5500/${muscle}.html`;
+        gElement.addEventListener("mouseover", () => {
+          gElement.setAttribute("fill", "#ff5c7c");
         });
-
-        gElement.addEventListener("mouseover", function () {
-          var pathElements = gElement.querySelectorAll("path");
-
-          pathElements.forEach(function (pathElement) {
-            pathElement.setAttribute("fill", "#646a8e");
-          });
+        gElement.addEventListener("mouseout", () => {
+          gElement.setAttribute("fill", "#FFFFFF");
         });
-        gElement.addEventListener("mouseout", function () {
-          var pathElements = gElement.querySelectorAll("path");
-
-          pathElements.forEach(function (pathElement) {
-            pathElement.setAttribute("fill", "#FFFFFF");
-          });
-        });
+        // Uncomment the following line if you want to navigate to a new page when the user clicks on a muscle
+        // gElement.addEventListener("click", () => { window.location.href = "/muscle/" + muscle; });
       }
     }
   };
@@ -44,9 +35,21 @@ const Male = () => {
       "chest",
       "quads",
       "calves",
+      "glutes",
+      "hamstrings",
+      "lowerback",
+      "lats",
+      "traps-middle",
+      "triceps"
     ];
 
-    muscles.forEach(changeAbdominals);
+    const svgObjects = svgRef.current.getElementsByClassName("mySvg");
+
+    for (let i = 0; i < svgObjects.length; i++) {
+      svgObjects[i].addEventListener("load", () => {
+        muscles.forEach(changeAbdominals);
+      });
+    }
   }, []);
 
   return (
