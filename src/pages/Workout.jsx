@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Male from "../components/Male";
 import Button from "../components/Button";
-import ToggleSwitch from "../components/TSwitch";  
+import ToggleSwitch from "../components/TSwitch";
 import { Link } from "react-router-dom";
 function Workout() {
   return (
@@ -12,8 +12,7 @@ function Workout() {
         <div className="p-5">
           <Male />
         </div>
-        </div>
-      
+      </div>
     </>
   );
 }

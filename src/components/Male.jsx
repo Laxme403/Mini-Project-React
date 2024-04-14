@@ -1,55 +1,68 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const Male = () => {
   const svgRef = useRef();
 
-  const changeAbdominals = (muscle) => {
+  const changeAbdominals = (muscle, num) => {
     const svgObjects = svgRef.current.getElementsByClassName("mySvg");
+    let svgObject = svgObjects[num].contentDocument;
+    let gElement = svgObject.getElementById(muscle);
 
-    for (let i = 0; i < svgObjects.length; i++) {
-      var svgObject = svgObjects[i].contentDocument;
-      console.log("SVGOBJECT" , svgObject.getElementById(''));
-      var gElement = svgObject.getElementById(muscle);
-      console.log("GELEMNT" , gElement);
-      if (gElement) {
-        gElement.addEventListener("mouseover", () => {
-          gElement.setAttribute("fill", "custom-green");
-        });
-        gElement.addEventListener("mouseout", () => {
-          gElement.setAttribute("fill", "#FFFFFF");
-        });
-        // Uncomment the following line if you want to navigate to a new page when the user clicks on a muscle
-        // gElement.addEventListener("click", () => { window.location.href = "/muscle/" + muscle; });
-      }
+    if (gElement) {
+      gElement.addEventListener("mouseover", () => {
+        let children = gElement.children;
+        for (let i = 0; i < children.length; i++) {
+          let child = children[i];
+          child.setAttribute("fill", "#222538");
+        }
+      });
+
+      gElement.addEventListener("mouseout", () => {
+        let children = gElement.children;
+        for (let i = 0; i < children.length; i++) {
+          let child = children[i];
+          child.setAttribute("fill", "#FFFFFF");
+        }
+      });
+
+      // Uncomment the following line if you want to navigate to a new page when the user clicks on a muscle
+      // gElement.addEventListener("click", () => { window.location.href = "/muscle/" + muscle; });
     }
   };
 
   useEffect(() => {
-    const muscles = [
-      "abdominals",
-      "obliques",
-      "forearms",
-      "biceps",
-      "shoulders",
-      "traps",
-      "chest",
-      "quads",
-      "calves",
-      "glutes",
-      "hamstrings",
-      "lowerback",
-      "lats",
-      "traps-middle",
-      "triceps"
+    const musclesBody1 = [
+      "abdominals_male_front",
+      "obliques_male_front",
+      "forearms_male_front",
+      "biceps_male_front",
+      "shoulders_male_front",
+      "traps_male_front",
+      "chest_male_front",
+      "quads_male_front",
+      "calves_male_front",
+    ];
+    const musclesBody2 = [
+      "hamstrings_male_back",
+      "lowerback_male_back",
+      "glutes_male_back",
+      "lats_male_back",
+      "traps-middle_male_back",
+      "traps_male_back",
+      "shoulders_male_back",
+      "calves_male_back",
+      "triceps_male_back",
+      "forearms_male_back",
     ];
 
     const svgObjects = svgRef.current.getElementsByClassName("mySvg");
 
-    for (let i = 0; i < svgObjects.length; i++) {
-      svgObjects[i].addEventListener("load", () => {
-        muscles.forEach(changeAbdominals);
-      });
-    }
+    svgObjects[0].addEventListener("load", () => {
+      musclesBody1.forEach((muscle) => changeAbdominals(muscle, 0));
+    });
+    svgObjects[1].addEventListener("load", () => {
+      musclesBody2.forEach((muscle) => changeAbdominals(muscle, 1));
+    });
   }, []);
 
   return (
