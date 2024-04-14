@@ -11,7 +11,7 @@ function Workout() {
       <Navbar />
       <div className="flex space-x-32 h-[100vh] pt-20 justify-around">
         <div className="p-5">
-          <Male/>
+          <Female />
         </div>
       </div>
     </>
