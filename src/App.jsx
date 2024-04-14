@@ -1,4 +1,4 @@
-// App.jsx
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Workout from './pages/Workout.jsx';
 import Login from './pages/Login.jsx';

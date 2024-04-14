@@ -13,7 +13,7 @@ const Male = () => {
         let children = gElement.children;
         for (let i = 0; i < children.length; i++) {
           let child = children[i];
-          child.setAttribute("fill", "#222538");
+          child.setAttribute("fill", "#000000");
         }
       });
 
@@ -68,12 +68,12 @@ const Male = () => {
   return (
     <div className="flex gap-20 h-full" ref={svgRef}>
       <object
-        data="body.svg"
+        data="malebody_f.svg"
         type="image/svg+xml"
         className="w-full h-full object-contain mySvg"
       ></object>
       <object
-        data="body2.svg"
+        data="malebody_b.svg"
         type="image/svg+xml"
         className="w-full h-full object-contain mySvg"
       ></object>
