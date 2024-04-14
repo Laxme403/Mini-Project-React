@@ -13,7 +13,7 @@ const Male = () => {
       console.log("GELEMNT" , gElement);
       if (gElement) {
         gElement.addEventListener("mouseover", () => {
-          gElement.setAttribute("fill", "#ff5c7c");
+          gElement.setAttribute("fill", "custom-green");
         });
         gElement.addEventListener("mouseout", () => {
           gElement.setAttribute("fill", "#FFFFFF");

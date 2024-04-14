@@ -12,18 +12,6 @@ function Workout() {
         <div className="p-5">
           <Male />
         </div>
-        <div>
-        <div className="w-1/2">
-          <img src="/woman.svg"
-                alt="woman"
-                className=""/>
-        </div>
-        <div>
-        <img src="/man.svg"
-                alt="man"
-                className=""/>
-        </div>
-        </div>
         </div>
       
     </>

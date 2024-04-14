@@ -1,12 +1,12 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Navbar from '../components/Navbar';
-function FitHeal() {
+function Template() {
 return (
     <>
         <Navbar />
         <div className="flex flex-col justify-around pt-60 w-screen h-screen ">
-            <div className="box  flex text-2xl bg-custom-blue w-1/5 h-full text-white font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-4 hover:shadow-xl  border-0">
+            <div className="box  flex text-2xl bg-white w-1/5 h-full text-black font-bold rounded-xl shadow-lg transition-transform hover:-translate-y-4 hover:shadow-xl  border-0">
                 <div className="radio-buttons ">
                     <input type="radio" name="option1" className="mr-2 large-radio" /> Dumbbell<br />
                     <input type="radio" name="option1" className="mr-2" /> Machine<br />
@@ -32,4 +32,4 @@ return (
 );
 }
 
-export default FitHeal;
+export default Template;

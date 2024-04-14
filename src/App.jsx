@@ -5,6 +5,8 @@ import Login from './pages/Login.jsx';
 import BMICalculator from './pages/BMICalculator.jsx';
 import Template from './pages/Template.jsx'; 
 import Index from './pages/Index.jsx';   
+import Modal from './pages/Modal.jsx';
+
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
       <Route path='/bmi' element={<BMICalculator />} />
       <Route path='/template' element={<Template/>} />
       <Route path='/workout' element={<Workout/>} />
+      <Route path='/modal' element={<Modal/>} />
     </Routes>
   );
 }
-
-export default App;
+  export default App;
+  
