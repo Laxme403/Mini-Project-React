@@ -6,6 +6,7 @@ import BMICalculator from './pages/BMICalculator.jsx';
 import Template from './pages/Template.jsx'; 
 import Index from './pages/Index.jsx';   
 import Modal from './pages/Modal.jsx';
+import Painrelief from './pages/Painrelief.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/template' element={<Template/>} />
       <Route path='/workout' element={<Workout/>} />
       <Route path='/modal' element={<Modal/>} />
+      <Route path='/pain' element={<Painrelief/>} />
     </Routes>
   );
 }

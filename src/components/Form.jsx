@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export default function From(){
     return(
-        <div className='bg-slate-200 px-20 py-20 rounded-3xl border-2 border-black'>
+        <div className='bg-slate-200 px-20 py-20 rounded-3xl shadow-xl'>
             <h1 className='text-5xl font-semibold'>Welcome! </h1>
             <p className='font-medium text-lg text-black mt-4'>Please Enter your details.</p>
             <div className='mt-8'>
