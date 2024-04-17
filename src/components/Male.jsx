@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Male = () => {
   const svgRef = useRef();
+  
+  const navigate = useNavigate();
 
   const changeAbdominals = (muscle, num) => {
     const svgObjects = svgRef.current.getElementsByClassName("mySvg");
@@ -23,6 +26,10 @@ const Male = () => {
           let child = children[i];
           child.setAttribute("fill", "#FFFFFF");
         }
+      });
+
+      gElement.addEventListener("click", () => {
+        navigate(`/exersize/${muscle}`);
       });
 
       // Uncomment the following line if you want to navigate to a new page when the user clicks on a muscle

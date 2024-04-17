@@ -9,6 +9,7 @@ import Modal from './pages/Modal.jsx';
 import ModalBMI from './pages/Modalbmi.jsx';
 import Diet from './components/Diet.jsx';
 import Trial from './pages/Trial.jsx';
+import Exersize from './pages/Exersize.jsx';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <Route path='/diet' element={<Diet/>} />
       <Route path='/modalbmi' element={<ModalBMI/>} />
       <Route path='/trial' element={<Trial/>} />
+      <Route path='/exersize/:name' element={<Exersize/>} />
+      <Route path='/exersize' element={<Exersize/>} />
 
     </Routes>
   );

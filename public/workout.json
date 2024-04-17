@@ -1,0 +1,41 @@
+[
+    {
+      "muscle": "abdominals_male_front",
+      "description": "Front abdominal muscles, often referred to as abs, which help with trunk flexion and rotation.",
+        "equipment": "dumbell",
+        "link": "https://www.youtube.com/watch?v=2PdJFbjWHEU"
+    },
+    {
+      "muscle": "obliques_male_front",
+      "description": "Muscles on the sides of the abdomen that help with trunk rotation and lateral flexion."
+    },
+    {
+      "muscle": "forearms_male_front",
+      "description": "Muscles on the front side of the forearm responsible for wrist and finger movements."
+    },
+    {
+      "muscle": "biceps_male_front",
+      "description": "Front upper arm muscles responsible for elbow flexion and forearm supination."
+    },
+    {
+      "muscle": "shoulders_male_front",
+      "description": "Muscles surrounding the shoulder joint, including the deltoids and rotator cuff muscles."
+    },
+    {
+      "muscle": "traps_male_front",
+      "description": "Trapezius muscles located on the upper back and neck region, responsible for shoulder elevation and scapular movement."
+    },
+    {
+      "muscle": "chest_male_front",
+      "description": "Major chest muscles, including the pectoralis major and minor, responsible for arm adduction and shoulder flexion."
+    },
+    {
+      "muscle": "quads_male_front",
+      "description": "Front thigh muscles, including the quadriceps femoris group, responsible for knee extension and hip flexion."
+    },
+    {
+      "muscle": "calves_male_front",
+      "description": "Muscles located in the back of the lower leg, including the gastrocnemius and soleus, responsible for ankle plantar flexion."
+    }
+  ]
+  
