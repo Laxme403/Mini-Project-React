@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
 const BMICalculator = () => {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -30,41 +29,40 @@ const BMICalculator = () => {
 
   return (
     <>
-    <Navbar/>
     <div>
-    <div className="bg-white flex items-center justify-center pt-44">
-      <div className="bg-custom-green p-8 rounded-2xl transition-transform hover:-translate-y-2 hover:shadow-2xl">
+    <div className="flex items-center justify-center">
+      <div className="bg-white p-8 rounded-3xl border-4 border-black transition-transform hover:-translate-y-2 hover:shadow-2xl">
         <div className="mb-6">
-          <label className="block mb-2 text-white" htmlFor="weight">
+          <label className="block mb-2 text-black font-bold text-2xl" htmlFor="weight">
             WEIGHT(KG)
           </label>
           <input
             id="weight"
             type="number"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+            className="w-full px-3 py-2 border-black rounded-2xl border-4 "
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />
         </div>
         <div className="mb-6">
-          <label className="block mb-2 text-white" htmlFor="height">
+          <label className="block mb-2 text-black font-bold text-2xl" htmlFor="height">
             HEIGHT(CM)
           </label>
           <input
             id="height"
             type="number"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+            className="w-full px-3 py-2 border-4 border-black rounded-2xl"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
           />
         </div>
         <button
-          className="w-full bg-custom-blue hover:bg-custom-green text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-indigo-600"
+          className="w-full bg-white text-2xl border-black border-4 hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded-2xl "
           onClick={calculate}
         >
           Calculate BMI
         </button>
-        <div id="results" className="mt-4 text-center text-white font-semibold">
+        <div id="results" className="mt-4 text-center text-2xl text-black font-bold">
           {measure}
         </div>
       </div>

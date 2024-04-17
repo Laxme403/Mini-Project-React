@@ -1,11 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Workout from './pages/Workout.jsx';
+import Workoutf from './pages/Workoutf.jsx';
+import Workoutm from './pages/Workoutm.jsx';
 import Login from './pages/Login.jsx';
-import BMICalculator from './pages/BMICalculator.jsx';
 import Template from './pages/Template.jsx'; 
 import Index from './pages/Index.jsx';   
 import Modal from './pages/Modal.jsx';
+import ModalBMI from './pages/Modalbmi.jsx';
+import Diet from './components/Diet.jsx';
+import Trial from './pages/Trial.jsx';
 
 
 function App() {
@@ -13,10 +16,14 @@ function App() {
     <Routes>
       <Route path='/' element={<Index />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/bmi' element={<BMICalculator />} />
       <Route path='/template' element={<Template/>} />
-      <Route path='/workout' element={<Workout/>} />
+      <Route path='/wf' element={<Workoutf/>} />
+      <Route path='/wm' element={<Workoutm/>} />
       <Route path='/modal' element={<Modal/>} />
+      <Route path='/diet' element={<Diet/>} />
+      <Route path='/modalbmi' element={<ModalBMI/>} />
+      <Route path='/trial' element={<Trial/>} />
+
     </Routes>
   );
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Male from "../components/Male";
+import Navbar from "../components/Navbar"
 import Female from "../components/Female";
 import Button from "../components/Button";
 import ToggleSwitch from "../components/TSwitch";
 import { Link } from "react-router-dom";
-function Workout() {
+function Workoutf() {
   return (
     <>
       <Navbar />
@@ -18,4 +17,4 @@ function Workout() {
   );
 }
 
-export default Workout;
+export default Workoutf;
