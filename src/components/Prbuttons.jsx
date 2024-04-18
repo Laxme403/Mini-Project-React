@@ -23,7 +23,7 @@ const Prbuttons = ({ example }) => {
 
   return (
     <div
-      className="border-2 border-black rounded-xl p-4 mt-4 ml-6 bg-black hover:scale-110 transform transition duration-400 w-1/5 shadow-2xl relative"
+      className="border-2 border-black rounded-xl p-4 mt-4 ml-6 bg-black hover:scale-110 transform transition duration-400 w-1/5 shadow-2xl z-10 relative"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -31,8 +31,8 @@ const Prbuttons = ({ example }) => {
         {name} {isHovered}
       </p>
       <div
-        className={` duration-500 ease-in-out p-4 border border-white rounded-md bg-black text-white z-10 ${
-          isHovered ? "h-full" : "hidden"
+        className={` duration-500 ease-in-out p-4 border border-white rounded-md bg-black text-white ${
+          isHovered ? "h-full relative z-50" : "hidden z-10"
         }`}
       >
         <p>{description}</p>
@@ -41,7 +41,10 @@ const Prbuttons = ({ example }) => {
           <p>Where it happens: {where_it_happens}</p>
           <p>Effects: {effects}</p>
           <p>Symptoms: {symptoms}</p>
-         <Video url={link}/>
+         {/* <Video url={link}/> */}
+         <video controls>
+                  <source src={link} type="video/mp4" />
+            </video>
         </div>
       </div>
     </div>
