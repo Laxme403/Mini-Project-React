@@ -7,6 +7,27 @@
      
     },
     {
+      "muscle": "abdominals_male_front",
+      "id":"Kettlebell Windmill",
+      "description": "1.Sit on the floor with your legs bent, knees together and feet raised slightly off the floor.\n2.Starting on one side and sitting up straight with your core muscles engaged, lift the kettlebell off the floor with both hands and bring it across your body to the other side, rotating your chest towards the floor as you do so.\n3.Tap the kettlebell lightly on the floor and bring the kettlebell back across your body to the starting position, rotating your chest towards the floor.\n4.Repeat, keeping the legs bent and feet raised throughout the exercise.",
+     "link": "https://media.musclewiki.com/media/uploads/videos/branded/male-Kettlebells-kettlebell-windmill-front.mp4#t=0.1"
+    
+    },
+    {
+      "muscle": "abdominals_female_front",
+      "id":"Kettlebell Russian Twist",
+      "description": "1.Sit on the floor with your legs bent, knees together and feet raised slightly off the floor.\n2.Starting on one side and sitting up straight with your core muscles engaged, lift the kettlebell off the floor with both hands and bring it across your body to the other side, rotating your chest towards the floor as you do so.\n3.Tap the kettlebell lightly on the floor and bring the kettlebell back across your body to the starting position, rotating your chest towards the floor.\n4.Repeat, keeping the legs bent and feet raised throughout the exercise.",
+     "link": "https://media.musclewiki.com/media/uploads/videos/branded/female-Kettlebells-kettlebell-russian-twist-front.mp4#t=0.1"
+     
+    },
+    {
+      "muscle": "abdominals_female_front",
+      "id":"Kettlebell Windmill",
+      "description": "1.Sit on the floor with your legs bent, knees together and feet raised slightly off the floor.\n2.Starting on one side and sitting up straight with your core muscles engaged, lift the kettlebell off the floor with both hands and bring it across your body to the other side, rotating your chest towards the floor as you do so.\n3.Tap the kettlebell lightly on the floor and bring the kettlebell back across your body to the starting position, rotating your chest towards the floor.\n4.Repeat, keeping the legs bent and feet raised throughout the exercise.",
+     "link": "https://media.musclewiki.com/media/uploads/videos/branded/female-Kettlebells-kettlebell-windmill-side.mp4#t=0.1"
+    
+    },
+    {
       "muscle": "forearms_male_front",
       "description": "Muscles on the front side of the forearm responsible for wrist and finger movements."
     },
@@ -19,7 +40,7 @@
       "description": "Muscles surrounding the shoulder joint, including the deltoids and rotator cuff muscles."
     },
     {
-      "muscle": "abdominals_male_front",
+      "muscle": "shoulders_male_front",
       "description":"1.Stand with your feet shoulder width apart holding dumbbells with both hands in front just past shoulder width.\n2. Bend forward at the hips with a slight bend in your knees, keeping your back straight.\n3. Engage your shoulder blades, as if you are trying to touch them together.",
       "equipment": "Dumbbells",
       "link": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-silverback-shrug-front.mp4#t=0.1",
