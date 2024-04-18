@@ -5,7 +5,6 @@ import Workoutm from './pages/Workoutm.jsx';
 import Login from './pages/Login.jsx';
 import Index from './pages/Index.jsx';   
 import Modal from './pages/Modal.jsx';
-import Painrelief from './pages/Painrelief.jsx';
 import ModalBMI from './pages/Modalbmi.jsx';
 import Diet from './components/Diet.jsx';
 import Trial from './pages/Trial.jsx';

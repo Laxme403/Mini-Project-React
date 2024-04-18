@@ -17,9 +17,9 @@ const Exercise = () => {
     <>
       <Navbar />
       <div className="flex justify-around p-40 h-full">
-        <div className="rounded-lg shadow-xl w-1/2 space-y-36">
+        <div className="rounded-lg shadow-xl w-1/2 space-y-36"style={{ whiteSpace: 'pre-line' }}>
           {filteredExercises.map((desc, index) => (
-            <div key={index}>
+            <div key={index} className="">
               <div className="bg-black rounded-lg text-center h-20">
                 <h1 className="font-bold text-4xl text-white">{desc.id}</h1>
               </div>
@@ -29,7 +29,7 @@ const Exercise = () => {
                   <source src={desc.link} type="video/mp4" />
                 </video>
                 <p className="font-bold text-lg" key={index}>
-                  Description: {desc.description}
+                  {desc.description}
                 </p>
               </div>
             </div>

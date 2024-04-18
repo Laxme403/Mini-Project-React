@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Prbuttons from "../components/Prbuttons"
-import data from "../../public/painrelif.json"
+import painreliefData from "../../public/workout.json";
 
-function Workout() {
+function PainRelief() {
   return (<>
       <Navbar />
     <div className="flex justify-center items-center mt-5 flex-col">
-      <button class="cta ">
+      <button className="cta ">
   <span>Hover me</span>
   <svg width="15px" height="10px" viewBox="0 0 13 10">
     <path d="M1,5 L11,5"></path>
@@ -24,4 +24,4 @@ function Workout() {
   );
 }
 
-export default Workout;
+export default PainRelief;
