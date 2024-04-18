@@ -64,7 +64,7 @@ function Index() {
               />
               <span className="card-social  bg-black bg-opacity-45 text-white text-9xl absolute bottom-[25%] left-0 z-20">WORKOUT</span>
             </div>
-            <Link to="/pain">
+            <Link to="/pain"></Link>
           <div className="relative card flex flex-col card h-96 mr-10 ml-10 rounded-3xl transform hover:rotate-y-180">
             <img
               src="/Muscle-Pain-modified.jpg"

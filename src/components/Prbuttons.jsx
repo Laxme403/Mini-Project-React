@@ -38,8 +38,4 @@ const Prbuttons = ({ example }) => {
   );
 };
 
-<<<<<<< HEAD
 export default Prbuttons;
-=======
-export default Prbuttons;
->>>>>>> master
