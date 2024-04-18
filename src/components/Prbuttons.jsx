@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Video from "./Video";
 
 const Prbuttons = ({ example }) => {
-  const { name, description, how_it_happens, where_it_happens, effects, symptoms ,link} = example;
+  const {
+    name,
+    description,
+    how_it_happens,
+    where_it_happens,
+    effects,
+    symptoms,
+    link,
+  } = example;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,20 +27,21 @@ const Prbuttons = ({ example }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-        
-      <p className="tip text-white font-bold text-lg">{name} {isHovered}</p>
+      <p className="tip text-white font-bold text-lg">
+        {name} {isHovered}
+      </p>
       <div
-  className={` duration-500 ease-in-out p-4 border border-white rounded-md bg-black text-white z-10 ${
-    isHovered ? 'h-full' : 'hidden'
-  }`}
->
+        className={` duration-500 ease-in-out p-4 border border-white rounded-md bg-black text-white z-10 ${
+          isHovered ? "h-full" : "hidden"
+        }`}
+      >
         <p>{description}</p>
         <div>
-          <p className='text-xs'>How it happens: {how_it_happens}</p>
+          <p className="text-xs">How it happens: {how_it_happens}</p>
           <p>Where it happens: {where_it_happens}</p>
           <p>Effects: {effects}</p>
           <p>Symptoms: {symptoms}</p>
-          <a href="{link}"><p>link</p></a>
+         <Video url={link}/>
         </div>
       </div>
     </div>

@@ -116,12 +116,17 @@ const DietPlanForm = () => {
           </label>
           <label className="flex flex-col font-bold">
             Dietary Requirements
-            <input
+            <select
               type="text"
               className="border-black border-2 rounded-lg"
               name="dietary_requirements"
               onChange={handleChange}
-            />
+              >
+              <option value="">Select...</option>
+              <option value="male">Vegetarian</option>
+              <option value="female">Non-Vegetarian</option>
+            </select>
+    
           </label>
           <label className="flex flex-col font-bold">
             Gender
@@ -173,9 +178,9 @@ const DietPlanForm = () => {
       {result && <div>{result}</div> && (
         <div
           ref={resultRef}
-          className="w-full h-full p-20 absolute bg-white z-0 text-center"
+          className="w-screen h-screen p-20 top-0 flex gap-10 flex-col absolute bg-white space-y-3.5 z-0 text-center"
         >
-          <h1 className="text-5xl font-bold text-center">Diet Plan</h1>
+          <h1 className="text-8xl font-bold text-center">Diet Plan</h1>
           <div className="flex flex-row justify-center space-x-6">
             <div className="border-4 w-72 font-bold bg-black border-white  bg-black text-white hover:bg-white hover:border-black hover:text-black text-center rounded-xl">
               <h3 className="font-bold text-2xl">Breakfast</h3>
