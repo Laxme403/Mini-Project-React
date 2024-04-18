@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Prbuttons = ({ example }) => {
-  const { name, description, how_it_happens, where_it_happens, effects, symptoms } = example;
+  const { name, description, how_it_happens, where_it_happens, effects, symptoms ,link} = example;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -31,10 +31,15 @@ const Prbuttons = ({ example }) => {
           <p>Where it happens: {where_it_happens}</p>
           <p>Effects: {effects}</p>
           <p>Symptoms: {symptoms}</p>
+          <a href="{link}"><p>link</p></a>
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Prbuttons;
+=======
+export default Prbuttons;
+>>>>>>> master

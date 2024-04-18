@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef} from 'react';
 import axios from 'axios';
 const DietPlanForm = () => {
     const [form, setForm] = useState({
@@ -11,6 +11,7 @@ const DietPlanForm = () => {
         location: '',
         calorie:''
     });
+    const resultRef = useRef(null);
     const [result, setResult] = useState(null);
     const handleChange = (e) => {
         setForm({
@@ -37,13 +38,22 @@ const DietPlanForm = () => {
         const headers = {
             "Content-Type": "application/json",
         };
+        try{
         const response = await axios.post(url, payload, { headers });
         if (response.status === 200) {
-            setResult(JSON.parse(response.data.candidates[0].content.parts[0].text.replace("```json\n", "").replace("\n```", "")));
+            
+          setResult(JSON.parse(response.data.candidates[0].content.parts[0].text.replace("```json\n", "").replace("\n```", "")));
+          const newWindow = window.open("", "_blank"); // Open a new window
+          newWindow.document.write(`<pre>${JSON.stringify(result, null, 2)}</pre>`); // Write the result to the new window
+          resultRef.current.scrollIntoView({ behavior: 'smooth' }); // Scroll to the result element
         } else {
             console.error(`Request failed with status code: ${response.status}`);
         }
-    };
+      }catch (error){
+        console.error('There was an error!', error);
+      }
+      }
+    
 
     return (
       <>
@@ -98,12 +108,9 @@ const DietPlanForm = () => {
 </div>
             {result && <div>{result}</div> &&(
           
-          <div className=" w=1/2 ">
-        <h1 className="text-5xl font-bold">Diet Plan</h1>
-        
-
-        <h2 className="text-center text-5xl font-bold">Meal Plan</h2>
-        <div className="flex flex-row space-x-9">
+          <div ref={resultRef} className=" w=1/2 ">
+        <h1 className="text-5xl font-bold text-center">Diet Plan</h1>
+        <div className="flex flex-row justify-center space-x-6">
         <div  className="border-4 w-72 font-bold bg-black border-white  bg-black text-white hover:bg-white hover:border-black hover:text-black text-center rounded-xl">
           <h3 className="font-bold text-2xl">Breakfast</h3>
           <ul>
